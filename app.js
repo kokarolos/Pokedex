@@ -1,6 +1,5 @@
-
 const poke_container = document.getElementById('poke_container');
-const pokemons_number = 500;
+const pokemons_number = 150;
 const colors = {
     fire : '#FDDFDF',
     grass : '#DEFDE0',
@@ -46,6 +45,8 @@ function createPokemonCard(pokemon) {
     const type =  main_types.find(
         type => poke_types.indexOf(type) > -1
         );
+    const color = colors[type];
+    pokemonEl.style.backgroundColor = color;
 
     const pokeInnerHtml ='<div class = "img-container">'+
     '<img src="https://pokeres.bastionbot.org/images/pokemon/'+pokemonId + '.png"'+
@@ -54,13 +55,9 @@ function createPokemonCard(pokemon) {
     '<span class ="number">#'+ pokemonId +'</span>'+
     '<h3 class="name">' + pokemonName + '</h3>' +
     '<small class = "type">Type: <span>' + type + '</span></small>'+
-    '</div>'
-    
-    
+    '</div>';
 
     pokemonEl.innerHTML = pokeInnerHtml;
 
     poke_container.appendChild(pokemonEl);
 }
-
-
