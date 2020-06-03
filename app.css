@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    color:white;
+}
+
+.poke_container{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
